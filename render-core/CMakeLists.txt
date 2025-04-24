@@ -22,7 +22,6 @@ target_compile_definitions(render-core PRIVATE RENDER_CORE_BUILD_DLL RENDER_CORE
 target_include_directories(render-core
     PUBLIC
         ${INCLUDE_DIR}
-        ${CMAKE_SOURCE_DIR}/vendor/glm  # Aggiunta include path per GLM
 )
 
 # === Aggiungi glad ===
@@ -32,9 +31,10 @@ target_include_directories(glad PUBLIC ${INCLUDE_DIR})
 # === Linka dipendenze staticamente ===
 target_link_libraries(render-core
     PRIVATE
-    glad
-    SDL3::SDL3
-    spdlog::spdlog
+        glad
+        glm              # Ora viene da add_subdirectory nel wrapper
+        SDL3::SDL3
+        spdlog::spdlog
 )
 
 # === Linka opengl32 su Windows ===
