@@ -10,6 +10,7 @@ set(SDL_STATIC ON  CACHE BOOL "" FORCE)   # abilita static library
 set(SDL_TEST OFF CACHE BOOL "" FORCE)     # disattiva i test
 
 # Submodules (devono essere dentro questa cartella o sottocartelle)
+add_subdirectory(vendor/glm)
 add_subdirectory(vendor/spdlog)
 add_subdirectory(vendor/SDL2)
 
