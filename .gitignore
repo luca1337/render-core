@@ -1,0 +1,55 @@
+# === CMake build ===
+build/
+dist/
+.cache/
+
+# === CMake output files ===
+CMakeFiles/
+CMakeCache.txt
+cmake_install.cmake
+Makefile
+
+# === Compilati ===
+*.exe
+*.dll
+*.lib
+*.a
+*.so
+*.exp
+*.pdb
+*.obj
+*.o
+
+# === Ninja build system ===
+.ninja_deps
+.ninja_log
+build.ninja
+rules.ninja
+
+# === Visual Studio ===
+*.sln
+*.vcxproj*
+*.filters
+*.user
+
+# === Logs ===
+*.log
+
+# === Backup / temp ===
+*.tmp
+*.bak
+*.swp
+*~
+
+# === Editor directories ===
+.vscode/
+.idea/
+
+# === macOS ===
+.DS_Store
+
+# === Vendor submodules: ignora solo contenuto, non i metadati ===
+/vendor/SDL/*
+!/vendor/SDL/.git
+/vendor/spdlog/*
+!/vendor/spdlog/.git
